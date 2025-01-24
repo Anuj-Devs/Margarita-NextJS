@@ -1,0 +1,88 @@
+[
+  {
+    "title": "Arizona ",
+    "subData": [{
+      "name": "Phoenix",
+      "number": "602-300-6497"
+    }]
+  },
+  {
+    "title": "California ",
+    "subData": [{
+      "name": "Inland Empire",
+      "number": "713-664-RITA"
+    },
+    {
+      "name": "Oceanside",
+      "number": "713-664-RITA"
+    },
+    {
+      "name": "Orange County",
+      "number": "713-664-RITA"
+    },
+    {
+      "name": "San Diego",
+      "number": "713-664-RITA"
+    }
+  ]
+  },
+  {
+    "title": "Florida ",
+    "subData": [{
+      "name": "Emerald Coast",
+      "number": "210-378-6565"
+    },
+    {
+      "name": "Panama City Beach",
+      "number": "210-378-6565"
+    },
+    {
+      "name": "Tampa Bay",
+      "number": "210-378-6565"
+    }
+  ]
+  },
+  {
+    "title": "Louisiana ",
+    "subData": [{
+      "name": "Lake Charles",
+      "number": "337-304-4652"
+    }]
+  },
+  {
+    "title": "Texas ",
+    "subData": [{
+      "name": "Aggieland / College Station",
+      "number": "713-598-8470"
+    },
+    {
+      "name": "Atascocita",
+      "number": "281-812-1843"
+    },
+    {
+      "name": "Beaumont",
+      "number": "409-781-3809"
+    },
+    {
+      "name": "Conroe",
+      "number": "281-639-0090"
+    },
+    {
+      "name": "Cypress",
+      "number": "281-639-0090"
+    },
+    {
+      "name": "Houston - Central",
+      "number": "281-639-0090"
+    },
+    {
+      "name": "Katy",
+      "number": "281-639-0090"
+    },
+    {
+      "name": "Kingwood",
+      "number": "281-639-0090"
+    }
+  ]
+  }
+]
