@@ -1,10 +1,8 @@
 // src/app/buy/page.tsx
-import Navbar from '../../components/Navbar';
 
 export default function BuyNow() {
   return (
     <div>
-      <Navbar />
       <div className="min-h-screen flex justify-center items-center bg-gray-100">
         <div className="relative w-full max-w-md bg-white shadow-2xl rounded-xl p-6">
           {/* Card Content */}

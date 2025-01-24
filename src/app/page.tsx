@@ -16,7 +16,6 @@ import { LuClock9 } from "react-icons/lu";
 import { FaPaperPlane } from "react-icons/fa";
 import { FaArrowUp } from 'react-icons/fa';
 import { TypeAnimation } from "react-type-animation";
-import Carousel from '@/components/Carousel';
 export default function Dashboard() {
   const containerStyle = {
     width: '100%',
@@ -45,11 +44,14 @@ export default function Dashboard() {
     '10 Twelve gauge cords',
     '1 MR. MARGARITA WEBSITE WITH DOMAIN & HOSTING!!!'
   ]
-  const data13 = {
+  type DataType = { name: string; number: string };
+
+  const data13: DataType = {
     name: "Houston, TX",
-    number: "713-664-RITA"
-  }
-  const [selectedData, setSelectedData] = useState(data13);
+    number: "713-664-RITA",
+  };
+  
+  const [selectedData, setSelectedData] = useState<DataType>(data13);
   const [option1, setOption1] = useState(opt1);
   const opt2 = [
     '5 "Spaceman" model 6650-C Frozen Drink Machines',
@@ -295,18 +297,18 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    let obj = {
+    let obj: DataType = {
       name: "Houston, TX",
-      number: "713-664-RITA"
-    }
+      number: "713-664-RITA",
+    };
     setSelectedData(obj);
   }, []);
 
-  const selectName = (values: object) => {
-    console.log('values', values)
+  const selectName = (values: DataType) => {
+    console.log('values', values);
     handleCardClick();
     setSelectedData(values);
-  }
+  };
 
   const openMap = (val: string) => {
     const searchQuery = encodeURIComponent(val);
@@ -385,10 +387,10 @@ export default function Dashboard() {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [machineType, setMachineType] = useState('');
-  const [mixFlavors, setMixFlavors] = useState([]);
+  const [mixFlavors, setMixFlavors] = useState<string[]>([]);
   const [comments, setComments] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
 
     // Submit the form data to your server here
@@ -460,9 +462,6 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        {/* <div>
-          <Carousel />
-        </div> */}
         <div ref={servicesRef} className='pt-4 text-black bg-white pb-8 bg_custom'>
           <div className='text-center heading1111 font-bold text-text2'>Services</div>
           <div className='grid lg:grid-cols-2'>
@@ -730,18 +729,18 @@ export default function Dashboard() {
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                           />
                         </div>
-                      <div className="mb-4">
+                        <div className="mb-4">
                           <label htmlFor="mixFlavors" className="-mb-3 heading7 text-text3 font-semibold">
                             Mix Flavors:
                           </label>
                           <input
-                type="text"
+                            type="text"
                             id="mixFlavors"
                             value={mixFlavors.join(', ')}
                             onChange={(e) => setMixFlavors(e.target.value.split(',').map(flavor => flavor.trim()))}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                           />
-                        </div>
+                        </div>;
                       </div>
                       <div className='grid lg:grid-cols-2 gap-2'>
                         <div className="mb-4">
@@ -1165,7 +1164,7 @@ export default function Dashboard() {
 
                     {/* Loop through each subData (cities and phone numbers) */}
                     <div className="my-2">
-                      {region.subData.map((city, cityIndex) => (
+                      {region.subData.map((city: any, cityIndex: number) => (
                         <div key={cityIndex} className="mb-1">
                           <div className="font-semibold heading6 hover:text-blue-600 cursor-pointer" onClick={() => selectName(city)}>
                             {city.name}
