@@ -531,7 +531,7 @@ export default function Dashboard() {
         </div>
         <div className='divider'></div>
         <div className='bg-white card' ref={tabDetailScreen}>
-          <div className='cursor-pointer text-center flex'>
+          <div className='cursor-pointer text-center flex justify-between'>
             {optionValue.map((city, index) => (
               <div
                 key={city}
@@ -539,7 +539,7 @@ export default function Dashboard() {
                 className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center mx-1 ${activeTab === city
                     ? 'bg-green-800'
                     : 'bg-white'
-                  } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-400'}`}
+                  } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300'}`}
               >
                 <div
                   className={`p-1 heading6 font-semibold ${activeTab === city ? 'text-white' : 'text-black'
@@ -1191,7 +1191,7 @@ export default function Dashboard() {
           <div className='flex text-start'>
             <div className='m-2'>
               {optionValue.map((city, index) => (
-                <div onClick={() => handleTabClick(city, index, true)} key={index} className='min-w-max border border-transparent hover:border-gray-300 transition heading6 rounded-md cursor-pointer m-1 px-2'><li>{city}</li></div>
+                <div onClick={() => handleTabClick(city, index, true)} key={index} className='min-w-max border border-transparent hover:border-gray-300 transition heading6 rounded-md cursor-pointer m-1 px-2 text-white'><li>{city}</li></div>
               ))}
             </div>
           </div>
