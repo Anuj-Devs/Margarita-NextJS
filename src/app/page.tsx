@@ -531,7 +531,7 @@ export default function Dashboard() {
         </div>
         <div className='divider'></div>
         <div className='bg-white card' ref={tabDetailScreen}>
-          <div className='cursor-pointer text-center flex justify-between'>
+          <div className='cursor-pointer text-center flex overflow-auto'>
             {optionValue.map((city, index) => (
               <div
                 key={city}
@@ -539,7 +539,7 @@ export default function Dashboard() {
                 className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center mx-1 ${activeTab === city
                     ? 'bg-green-800'
                     : 'bg-white'
-                  } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300'}`}
+                  } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300 hover:shadow hover:-translate-y-1 hover:scale-105'}`}
               >
                 <div
                   className={`p-1 heading6 font-semibold ${activeTab === city ? 'text-white' : 'text-black'
@@ -556,7 +556,7 @@ export default function Dashboard() {
         {(floatTitle || activeTab !== 'OUR LOCATIONS') && (
           <div className='text-black bg-white pb-8 pt-2'>
             {floatTitle && (
-              <div className='px-4 pb-4 text-center'>
+              <div className='px-4 pb-4 text-center hidden md:block'>
                 <div className='animate-marquee text-red-600 font-bold heading2'>{floatTitle}</div>
               </div>
             )}
