@@ -32,20 +32,20 @@ body {
 
 @keyframes marquee {
   0% {
-    transform: translateX(40%);
+    transform: translateX(100%); /* Start outside from the right */
   }
   50% {
-    transform: translateX(-40%);
+    transform: translateX(-100%); /* Move completely to the left */
   }
   100% {
-    transform: translateX(40%);
+    transform: translateX(100%); /* Loop back to the start */
   }
 }
 
 .animate-marquee {
   display: inline-block;
   white-space: nowrap; /* Prevent text wrapping */
-  animation: marquee 8s ease-in-out infinite; /* 15s duration for the animation */
+  animation: marquee 16s linear infinite; /* Adjust timing as needed */
 }
 
 .card {
@@ -92,7 +92,9 @@ body {
   font-size: 20px;
 }
 .heading1 {
-  font-size: 22px;
+  font-size: 18px;
+  margin: 0 1rem;
+  word-wrap: break-word;
 }
 .heading11 {
   font-size: 26px;
@@ -117,6 +119,10 @@ body {
 }
 .bgImage {
   background-image: url('https://vendomat.modeltheme.com/wp-content/uploads/2023/11/hero-vending.jpg?id=24316');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 .simple-divider {
   border-top: 1px solid #7a7a7a; /* Dark black line */
@@ -237,6 +243,8 @@ body {
 .titleText {
   font-size: 35px;
   color: #ffffff;
+  padding: 0 1rem;
+  word-wrap: break-word;
 }
 
 
@@ -245,7 +253,40 @@ body {
   color: #ffffff;
 }
 
+.subtitleText span {
+  font-size: 20px;
+  line-height: 1.5;
+}
 
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .heading1 {
+    font-size: 16px;
+  }
+
+  /* .titleText {
+    font-size: 20px;
+  } */
+
+  /* .subtitleText {
+    padding: 0 1rem;
+  } */
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Desktop view adjustments */
+@media (min-width: 769px) {
+  /* .titleText {
+    font-size: 35px;
+  } */
+
+  /* .subtitleText {
+    font-size: 18px;
+  } */
+}
 .bg_custom {
   background-image: url(https://vendomat.modeltheme.com/wp-content/uploads/2021/10/Main-bg_right.png?id=23860) !important;
   background-position: center !important;

@@ -437,118 +437,139 @@ export default function Dashboard() {
 
   return (
     <div>
-      <Navbar selectedData={selectedData} onContactsClick={handleContactsClick} aboutMore={handleAboutmore} serviceArea={handleserviceArea} />
-      <div className="subTheme h-screen min-h-screen bg-gray-100">
-        <div className='bgImage h-full text-center justify-center flex items-center'>
-          <div className='absolute'>
-            <div className='titleText mx-64 justify-center text-center '>Margarita machine rentals Houston, Pasadena, League City, Pearland, Galveston party rentals, tables for rent, chairs - Houston parties.</div>
-            <div className='subtitleText mx-96 justify-center text-center pt-8'>
-            <TypeAnimation
-              sequence={[
-                "For margarita machines & party rentals inside beltway 8 - south houston - pearland - deer park - laporte - friendswood - clear lake - galveston",
-                1000,
-                "",
-                1000
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+      <div className="subTheme h-screen min-h-screen bg-gray-100 overflow-hidden">
+        <Navbar selectedData={selectedData} onContactsClick={handleContactsClick} aboutMore={handleAboutmore} serviceArea={handleserviceArea} />
+        <div className='bgImage h-full text-center flex items-center justify-center bg-cover bg-center relative'>
+          <div className='absolute w-full px-2 md:px-16'>
+            <div className='text-white heading11  text-left block md:hidden '>
+              Margarita machine rentals Houston, Pasadena, League City, Pearland, Galveston party rentals, tables for rent, chairs - Houston parties.
             </div>
-            {/* <div className='subtitleText mx-96 justify-center text-center pt-8'>For margarita machines & party rentals inside beltway 8 - south houston - pearland - deer park - laporte - friendswood - clear lake - galveston</div> */}
+            <div className='titleText justify-center text-center hidden md:block '>
+              Margarita machine rentals Houston, Pasadena, League City, Pearland, Galveston party rentals, tables for rent, chairs - Houston parties.
+            </div>
+            <div className="subtitleText justify-center text-center pt-8">
+              <span className="block md:hidden text-left">
+                For margarita machines & party rentals inside beltway 8 - south houston - pearland - deer park - laporte - friendswood - clear lake - galveston
+              </span>
+              <div className="hidden md:block">
+                <TypeAnimation
+                  sequence={[
+                    "For margarita machines & party rentals inside beltway 8 - south houston - pearland - deer park - laporte - friendswood - clear lake - galveston",
+                    1000,
+                    "",
+                    1000
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </div>
+            </div>
             <div className='pt-12 flex items-center justify-center'>
-              <button className=' rounded-md shadow-xl mx-4 p-4 px-8 bg-red-500 text-white hover:bg-white hover:text-black ' onClick={scrollToServices}>CHECK SERVICES</button>
-              <button onClick={() => handleContactsClick()} className=' rounded-md shadow-xl mx-4 p-4 px-8 bg-white text-black hover:bg-red-500 hover:text-white '>GET QUOTE</button>
+              <button
+                className='rounded-md shadow-xl mx-2 md:mx-4 p-3 md:p-4 px-6 md:px-8 bg-red-500 text-white hover:bg-white hover:text-black'
+                onClick={scrollToServices}
+              >
+                CHECK SERVICES
+              </button>
+              <button
+                onClick={() => handleContactsClick()}
+                className='rounded-md shadow-xl mx-2 md:mx-4 p-3 md:p-4 px-6 md:px-8 bg-white text-black hover:bg-red-500 hover:text-white'
+              >
+                GET QUOTE
+              </button>
             </div>
           </div>
         </div>
-        <div ref={servicesRef} className='pt-4 text-black bg-white pb-8 bg_custom'>
-          <div className='text-center heading1111 font-bold text-text2'>Services</div>
-          <div className='grid lg:grid-cols-2'>
-            <div>
-              <div className='flex justify-end pr-20'>
-                <svg style={{ width: '400px' }} viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <clipPath id="blob-674080084d755">
-                      <path fill="#474bff" d="M395.5,302.5Q312,365,233.5,376.5Q155,388,97.5,314Q40,240,90,153.5Q140,67,243.5,61Q347,55,413,147.5Q479,240,395.5,302.5Z"></path>
-                    </clipPath>
-                  </defs>
-                  <image
-                    x="0"
-                    y="0"
-                    width="100%"
-                    height="100%"
-                    clipPath="url(#blob-674080084d755)"  // Update to clipPath
-                    href="https://vendomat.modeltheme.com/wp-content/uploads/2020/08/Main-Blog_post2.jpg"  // Use href instead of xlink:href
-                    preserveAspectRatio="xMidYMid slice"
-                  />
-                </svg>
-                {/* <Image alt='Images' className='border rounded-full w-80 hover:scale-105 cursor-pointer transition delay-100 shadow-2xl' src={imageVal} /> */}
-              </div>
-            </div>
-            {/* <div className="">
-              <div className="vc_column-inner">
-                <div className="wpb_wrapper">
-                  <div className="svg-block">
-                    <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <clipPath id="blob-674080084d755">
-                          <path fill="#474bff" d="M395.5,302.5Q312,365,233.5,376.5Q155,388,97.5,314Q40,240,90,153.5Q140,67,243.5,61Q347,55,413,147.5Q479,240,395.5,302.5Z"></path>
-                        </clipPath>
-                      </defs>
-                      <image
-                        x="0"
-                        y="0"
-                        width="100%"
-                        height="100%"
-                        clipPath="url(#blob-674080084d755)"  // Update to clipPath
-                        href="https://vendomat.modeltheme.com/wp-content/uploads/2020/08/Main-Blog_post2.jpg"  // Use href instead of xlink:href
-                        preserveAspectRatio="xMidYMid slice"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+      </div>
 
-            <div className='cardPadding flex items-center'>
-              <div className='px-4 my-6'>
-                <div className=''>
-                  <div className='heading2 font-semibold text-gray-800'>Enter Your Zip Code Below To See Which Location You Need!!</div>
-                  <div className='pr-2 heading5 font-semibold pt-5'><i className="fas fa-magnifying-glass"></i> Enter your zip code here</div>
-                  <div>
-                    <input placeholder='Search Zip Here...' onChange={(e) => setZipValue(e.target.value)} type='text' value={zipValue} className='h-10 border border-gray-600 rounded-lg heading4 card cardPadding w-96 bg-white ring-0 space letterspaccing' />
-                  </div>
-                  {zipValue !== '' ? (
-                    <div className='pt-4'>
-                      <button className='w-96 rounded-md shadow-xl p-4 px-8 bg-red-500 text-white hover:bg-white hover:text-black '>GO</button>
-                    </div>
-                  ) : ''}
-                </div>
-              </div>
-            </div>
+        <div>
+        <div ref={servicesRef} className="pt-4 text-black bg-white pb-8 bg_custom">
+  <div className="text-center heading1111 font-bold text-text2">Services</div>
+  <div className="grid lg:grid-cols-2 gap-6">
+    {/* Image Section */}
+    <div className="flex justify-center lg:justify-end lg:pr-20">
+      <svg
+        style={{ width: '100%', maxWidth: '400px' }} // Adjusted to fit screen size on mobile
+        viewBox="0 0 480 380"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <clipPath id="blob-674080084d755">
+            <path
+              fill="#474bff"
+              d="M395.5,302.5Q312,365,233.5,376.5Q155,388,97.5,314Q40,240,90,153.5Q140,67,243.5,61Q347,55,413,147.5Q479,240,395.5,302.5Z"
+            ></path>
+          </clipPath>
+        </defs>
+        <image
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          clipPath="url(#blob-674080084d755)"
+          href="https://vendomat.modeltheme.com/wp-content/uploads/2020/08/Main-Blog_post2.jpg"
+          preserveAspectRatio="xMidYMid slice"
+        />
+      </svg>
+    </div>
+
+    {/* Content Section */}
+    <div className="cardPadding flex items-center justify-center">
+      <div className="px-4 my-6">
+        <div className="text-center lg:text-left"> {/* Make text centered on mobile, left-aligned on desktop */}
+          <div className="heading2 font-semibold text-gray-800">
+            Enter Your Zip Code Below To See Which Location You Need!!
           </div>
+          <div className="pr-2 heading5 font-semibold pt-5">
+            <i className="fas fa-magnifying-glass"></i> Enter your zip code here
+          </div>
+          <div className="w-full flex justify-center lg:justify-start mt-3">
+          <input
+              placeholder="Search Zip Here..."
+              onChange={(e) => setZipValue(e.target.value)}
+              type="text"
+              value={zipValue}
+              style={{ letterSpacing: '12px' }}
+              className="h-10 border border-gray-600 rounded-lg w-[90%] max-w-md bg-white ring-0 text-center tracking-wider" // Added text-center and tracking-wider for space between characters
+            />
+          </div>
+          {zipValue !== '' && (
+            <div className="pt-4 flex justify-center lg:justify-start">
+              <button className="w-[90%] max-w-md rounded-md shadow-xl p-4 bg-red-500 text-white hover:bg-white hover:text-black">
+                GO
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
         <div className='divider'></div>
-        <div className='bg-white card' ref={tabDetailScreen}>
-          <div className='cursor-pointer text-center flex overflow-auto'>
-            {optionValue.map((city, index) => (
-              <div
-                key={city}
-                onClick={() => handleTabClick(city, index, false)}
-                className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center mx-1 ${activeTab === city
-                    ? 'bg-green-800'
-                    : 'bg-white'
-                  } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300 hover:shadow hover:-translate-y-1 hover:scale-105'}`}
-              >
+        <div>
+          <div className='bg-white card' ref={tabDetailScreen}>
+            <div className='cursor-pointer text-center flex overflow-auto'>
+              {optionValue.map((city, index) => (
                 <div
-                  className={`p-1 heading6 font-semibold ${activeTab === city ? 'text-white' : 'text-black'
-                    }`}
+                  key={city}
+                  onClick={() => handleTabClick(city, index, false)}
+                  className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center mx-1 ${activeTab === city
+                      ? 'bg-green-800'
+                      : 'bg-white'
+                    } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300 hover:shadow hover:-translate-y-1 hover:scale-105'}`}
                 >
-                  {city}
+                  <div
+                    className={`p-1 heading6 font-semibold ${activeTab === city ? 'text-white' : 'text-black'
+                      }`}
+                  >
+                    {city}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
         <div className='divider'></div>
@@ -556,9 +577,9 @@ export default function Dashboard() {
         {(floatTitle || activeTab !== 'OUR LOCATIONS') && (
           <div className='text-black bg-white pb-8 pt-2'>
             {floatTitle && (
-              <div className='px-4 pb-4 text-center hidden md:block'>
-                <div className='animate-marquee text-red-600 font-bold heading2'>{floatTitle}</div>
-              </div>
+              <div className="px-4 pb-4 text-center hidden md:block overflow-hidden">
+              <div className="text-red-600 font-bold heading2 animate-marquee">{floatTitle}</div>
+            </div>
             )}
             <div className=''>
               {activeTab === 'Home' && (
@@ -1140,16 +1161,6 @@ export default function Dashboard() {
         </div>
         <div className='cardBg text-text2 pt-8' ref={contactInfoRef}>
           <div className='text-center heading1111 font-bold'>Contact Information for Our Mr. Margarita Locations</div>
-          {/* <ul className="flex space-x-8 list-disc items-center justify-center heading4">
-            {['AZ', 'CA', 'FL', 'LA', 'TX'].map((state) => (
-              <li
-                key={state}
-                className="hover:text-blue-500 cursor-pointer"
-              >
-                {state}
-              </li>
-            ))}
-          </ul> */}
           <div className='mx-32 pt-4'>
             <div className="grid lg:grid-cols-5 gap-4">
               {contactDetail && Array.isArray(contactDetail) && contactDetail.length > 0 ? (
@@ -1213,7 +1224,6 @@ export default function Dashboard() {
           <FaArrowUp size={20} color="#fff" />
         </div>
         )}
-      </div>
     </div>
   );
 }
