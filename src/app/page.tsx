@@ -556,7 +556,7 @@ export default function Dashboard() {
                 <div
                   key={city}
                   onClick={() => handleTabClick(city, index, false)}
-                  className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center mx-1 ${activeTab === city
+                  className={`rounded my-2 cursor-pointer transition border border-transparent flex items-center justify-center mx-1 min-w-32 ${activeTab === city
                       ? 'bg-green-800'
                       : 'bg-white'
                     } ${activeTab === city ? 'border border-green-800' : 'hover:border hover:border-gray-300 hover:shadow hover:-translate-y-1 hover:scale-105'}`}
@@ -588,20 +588,20 @@ export default function Dashboard() {
                   <div className=' cardPadding text-center'>
                     <div className='heading4 text2'>MR. MARGARITA's PARTY RENTALS STORE started out in Houston renting margarita machines in 1999. We have been in the frozen beverage business since 1986 working in and around daiquiri shops during college in Louisiana.Frozen Daiquiri's (especially hurricanes) are the perfect way to cool off on those hot humid Louisiana nights. In 1998 we moved to Houston, Texas and couldn't find any Daiquiri Shops to quench our thirsts for home. So we bought a slushy machine from a daiquiri supply store in Louisiana and soon found it at our neighbors houses more than ours! We quickly realized that we had a really unique market. So our Houston, TX party rentals business began with three frozen slushy machines as MR. MARGARITA (Mr. Daiquiri machine rentals just did not sound right in Texas!). Now we rent out over 50 daiquiri and margarita machines (same thing!) and have created a network of home based MR. MARGARITA party machine rental companies across America. Come on in and see why Mr. Margarita has become a trusted source for party rentals!</div>
                   </div>
-                  <div className='bg-white card cardPadding col-span-2 grid lg:grid-cols-2 m-8 my-4 mx-20'>
+                  <div className="bg-white card cardPadding col-span-2 grid lg:grid-cols-2 mx-2 lg:m-8 lg:my-4 lg:mx-20">
                     <div className='p-2'>
                       <div className='text-center'>YOU CAN RENT THIS...</div>
                       <div className='flex items-center justify-center border border-gray-400 rounded-lg'>
                         <img className='hover:scale-110 transition py-4' src='/image2.png' style={{ width: '280px' }} />
                       </div>
-                      <div className='text-center'>STAINLESS COMMERCIAL</div>
+                      <div className='text-center heading5 bg-gray-200 rounded-md py-1'>STAINLESS COMMERCIAL</div>
                     </div>
                     <div className='p-2'>
-                      <div className='text-center'>INSTEAD OF THIS...</div>
+                      <div className='text-center line-through'>INSTEAD OF THIS...</div>
                       <div className='flex items-center justify-center border border-gray-400 rounded-lg'>
                         <img className='hover:scale-110 transition py-4' src='/image1.png' style={{ width: '280px' }} />
                       </div>
-                      <div className='text-center'>PLASTIC</div>
+                      <div className='text-center heading5 bg-gray-200 rounded-md py-1'>PLASTIC</div>
                     </div>
                   </div>
                   <div className='heading4 text2 cardPadding text-center'>
@@ -795,7 +795,7 @@ export default function Dashboard() {
                     <div className='heading5 pb-1'>Want your equipment to work???</div>
                     <div className='heading5 pb-1'>Then your at the right place....</div>
                     <div className='font-bold'>Houstons ONLY Choice for frozen Margarita Machine Rentals!!!</div>
-                    <div className='bg-white card cardPadding col-span-2 grid lg:grid-cols-2 m-8 my-2 mx-20'>
+                    <div className='bg-white card cardPadding col-span-2 grid lg:grid-cols-2 mx-2 lg:m-8 lg:my-4 lg:mx-20'>
                       <div className='p-2'>
                         <div className='text-center'> WHY RENT THIS -</div>
                         <div className='flex items-center justify-center border border-gray-400 rounded-lg'>
@@ -962,7 +962,7 @@ export default function Dashboard() {
         {activeTab === 'Home' && (
           <div>
             <div className=' text-black bg-white pb-8 pt-4'>
-              <div className='grid lg:grid-cols-3 gap-4 pb-4 mx-20'>
+              <div className='grid lg:grid-cols-3 gap-4 pb-4 mx-2 lg:mx-20 '>
                 <div className=' card '>
                   <div className='static top-0 z-10 justify-center items-center flex text-white h-12  font-semibold bg-red-500'>PARTY RENTALS</div>
                   <div className='heading6 overflow-auto h-80 pt-4 px-4'>
@@ -1023,7 +1023,7 @@ export default function Dashboard() {
                   </GoogleMap>
                 </LoadScript>
               </div>
-              <div className='p-4 bg-white w-96 absolute right-56 top-36 shadow-xl hover:scale-110  transition  z-30 text-red-600 '>
+              <div className='p-4 bg-white w-96 absolute  right-0 lg:right-56 top-36 shadow-xl hover:scale-110  transition  z-30 text-red-600 '>
                 <div className='italic font-bold font-mono'>WE OFFER CUSTOMER PICK UPS AT THIS LOCATION ONLY!!!</div>
                 <div onClick={() => openMap('3410 Bluebonnet St, Pasadena, TX 77505, USA')} className='hover:underline cursor-pointer pt-4 hover:text-gray-700 text-gray-600 heading5 flex items-center'><FaLink /><span className='pl-1'>View Large Map</span></div>
               </div>
@@ -1054,33 +1054,33 @@ export default function Dashboard() {
         )}
         <div ref={contactMePageRef} className='py-2 text-text2 bg-white bg_custom2'>
           <div className='text-center heading1111 font-bold pb-12 pt-6'>Contact Us</div>
-          <div className='grid lg:grid-cols-2 gap-6 px-8'>
+          <div className='grid lg:grid-cols-2 gap-0 lg:gap-6 px-2 lg:px-8'>
             <div>
               <div>
-              <div className='grid lg:grid-cols-2 gap-6'>
+              <div className='grid lg:grid-cols-2 gap-2 lg:gap-6'>
                 <div className='flex items-center'>
-                  <div className='w-20 h-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><IoCall /></div>
+                  <div className='w-16 h-16 lg:h-20 lg:w-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><IoCall /></div>
                   <div className='p-4'>
                     <div className='heading3 text-text2 font-bold'>Phone number</div>
                     <div className='text-text1 heading4'>{selectedData.number}</div>
                   </div>
                 </div>
                 <div className='flex items-center'>
-                  <div className='w-20 h-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><MdOutlineMail /></div>
+                  <div className='w-16 h-16 lg:h-20 lg:w-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><MdOutlineMail /></div>
                   <div className='p-4'>
                     <div className='heading3 text-text2 font-bold'>Email Address</div>
                     <div className='text-text1 heading4'>info@MrMargarita.com</div>
                   </div>
                 </div>
                 <div className='flex items-center'>
-                  <div className='w-20 h-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><FaLocationDot /></div>
+                  <div className='w-16 h-16 lg:h-20 lg:w-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><FaLocationDot /></div>
                   <div className='p-4'>
                     <div className='heading3 text-text2 font-bold'>Location</div>
                     <div className='text-text1 heading4'>{selectedData.name}</div>
                   </div>
                 </div>
                 <div className='flex items-center'>
-                  <div className='w-20 h-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><LuClock9 /></div>
+                  <div className='w-16 h-16 lg:h-20 lg:w-20 heading1 text-white font-bold flex items-center justify-center bg-green-900 text-center rounded-lg shadow-md'><LuClock9 /></div>
                   <div className='p-4'>
                     <div className='heading3 text-text2 font-bold'>Schedule</div>
                     <div className='text-text1 heading4'>	10 am–7 pm</div>
@@ -1104,7 +1104,7 @@ export default function Dashboard() {
               <div className='card bg-white shadow-lg border border-gray-100 p-8 px-2 lg:px-12 md:px-8 relative'>
                 <h2 className="text-2xl text-center text-gray-800 mb-6">Send us a message</h2>
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-8">
+                  <div className="mb-4 lg:mb-8">
                     <div className="flex items-center border border-gray-300 rounded-md p-2">
                       <span className="mr-2 text-xl">👤</span>
                       <input
@@ -1119,7 +1119,7 @@ export default function Dashboard() {
                     </div>
                   </div>
 
-                  <div className="mb-8">
+                  <div className="mb-4 lg:mb-8">
                     <div className="flex items-center border border-gray-300 rounded-md p-2">
                       <span className="mr-2 text-xl">📧</span>
                       <input
@@ -1134,7 +1134,7 @@ export default function Dashboard() {
                     </div>
                   </div>
 
-                  <div className="mb-8">
+                  <div className="mb-4 lg:mb-8">
                     <div className="flex items-start border border-gray-300 rounded-md p-2">
                       <span className="mr-2 text-xl">💬</span>
                       <textarea
@@ -1160,9 +1160,9 @@ export default function Dashboard() {
           </div>
         </div>
         <div className='cardBg text-text2 pt-8' ref={contactInfoRef}>
-          <div className='text-center heading1111 font-bold'>Contact Information for Our Mr. Margarita Locations</div>
-          <div className='mx-32 pt-4'>
-            <div className="grid lg:grid-cols-5 gap-4">
+          <div className='text-center heading11 font-bold'>Contact Information for Our Mr. Margarita Locations</div>
+          <div className='mx-4 lg:mx-32 pt-4'>
+            <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-4">
               {contactDetail && Array.isArray(contactDetail) && contactDetail.length > 0 ? (
                 contactDetail.map((region, regionIndex) => (
                   <div
@@ -1192,7 +1192,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className='py-8 bg-green-900'>
+        <div className='pt-8 pb-2 bg-green-900'>
           <div className='grid lg:grid-cols-2 items-center text-center'>
             <div>
               <div className='text-gray-300 heading2 font-semibold'>{selectedData.name} Margarita Machine Rentals</div>
